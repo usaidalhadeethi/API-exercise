@@ -1,0 +1,69 @@
+body {
+    background-image: url('istock-1227056524-scaled-1200x800.jpg');
+}
+
+html::before {
+    content: "";
+    background: rgba(0, 0, 0, 0.4);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.name {
+    height: 198px;
+}
+
+.card {
+    transition: opacity 0.7s ease;
+    cursor: pointer;
+    box-shadow: 0px 5px 10px rgba(0,0,0,0.2);
+}
+
+.card:hover {
+    --bs-bg-opacity: 1; 
+}
+.card-body {
+    animation: scaleAnim2 1s ease-in-out;
+    -webkit-animation: scaleAnim2 1s ease-in-out;
+}
+
+.card-body2 {
+    display: none;
+}
+@media (max-width: 576px) {
+    .col {
+        margin-bottom: 10px !important;
+    }
+    .row {
+        margin-bottom: 0 !important;
+    }
+}
+.active {
+    display: flex;
+    animation: scaleAnim1 1s ease-in-out;
+    border: 5px solid rgb(255, 0, 0); /* Adjust the border style as desired */
+}
+@keyframes scaleAnim2 {
+    0% {
+        transform: translateY(-100%) scaleY(0);
+    }
+    100% {
+        transform: translateY(0) scaleY(1);
+    }
+}
+@keyframes scaleAnim1 {
+    0% {
+        transform: translateY(100%) scaleY(0);
+}
+    100% {
+        transform: translateY(0) scaleY(1);
+}
+}
+
+.non-active {
+    display: none;
+}
+
